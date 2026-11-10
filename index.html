@@ -15,6 +15,6 @@ const data=[
 {id:"P-202",village:"Golle",prop:"Oumarou Djibo",sup:"550 m2",statut:"paye"},
 {id:"P-301",village:"Dan Kassari",prop:"Hassan Mohamed",sup:"700 m2",statut:"paye"},
 ];
-function filter(){let q=document.getElementById('search').value.toLowerCase();let list=document.getElementById('list');list.innerHTML='';let f=data.filter(d=>d.prop.toLowerCase().includes(q)||d.id.toLowerCase().includes(q)||d.village.toLowerCase().includes(q));f.forEach(d=>{list.innerHTML+=`<div class="card ${d.statut=='impaye'?'unpaid':''}"><h3 style="color:#0a2a8a">Parcelle ${d.id} - ${d.village} - ${d.statut=='paye'?'PAYE':'NON PAYE'}</h3><p>Proprietaire: <b>${d.prop}</b></p><p>Superficie: <b>${d.sup}</b></p><a class="btn" href="https://wa.me/22797089285?text=Parcelle ${d.id} ${d.village}">Voir Plan sur Carte</a></div>`});}
+function filter(){let q=document.getElementById('search').value.toLowerCase();let list=document.getElementById('list');list.innerHTML='';let f=data.filter(d=>d.prop.toLowerCase().includes(q)||d.id.toLowerCase().includes(q)||d.village.toLowerCase().includes(q));f.forEach(d=>{list.innerHTML+=`<div class="card ${d.statut=='impaye'?'unpaid':''}"><h3 style="color:#0a2a8a">Parcelle ${d.id} - ${d.village} - ${d.statut=='paye'?'PAYE':'NON PAYE'}</h3><p>Proprietaire: <b>${d.prop}</b></p><p>Superficie: <b>${d.sup}</b></p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Dogondoutchi ${d.id} ${d.village}">Voir Plan sur Carte</a></div>`});}
 filter();
 </script></body></html>
